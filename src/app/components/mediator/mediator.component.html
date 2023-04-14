@@ -1,0 +1,22 @@
+<div class="container m-0 p-0">
+  <div class="card">
+    <div class="card-body">
+
+      <h3>Componente mediador</h3>
+
+      <button
+        data-test="send-parent" class="btn btn-secondary me-2"
+        (click)="sendMsgToParent()">Mensaje al padre</button>
+
+      <button
+        data-test="send-child" class="btn btn-secondary me-2"
+        (click)="sendMsgToChild()">Mensaje al hijo</button>
+
+      <button
+        data-test="reset-message" class="btn btn-danger"
+        (click)="reset()">Resetear</button>
+    </div>
+  </div>
+</div>
+
+

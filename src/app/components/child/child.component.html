@@ -1,0 +1,22 @@
+<div class="container m-0 p-0">
+  <div class="card">
+    <div class="card-body">
+
+      <h3>Componente hijo</h3>
+
+      <p data-test="child-counter">Valor del contador del padre: {{counter}}</p>
+      <p data-test="child-message">Mensaje recibido: {{message}}</p>
+
+      <button
+        data-test="increment" class="btn btn-primary me-2"
+        (click)="incrementCount()">Incrementar contador</button>
+
+      <button
+        data-test="reset" class="btn btn-danger"
+        (click)="resetClicks()">Resetear clics</button>
+
+    </div>
+  </div>
+</div>
+
+

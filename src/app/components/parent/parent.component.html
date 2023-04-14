@@ -1,0 +1,39 @@
+<div class="container m-2 col-4">
+  <div class="card">
+    <div class="card-body">
+
+      <h2>Componente padre</h2>
+
+      <p data-test="parent-counter" class="m-0">Valor del contador: {{counter}}</p>
+      <p data-test="parent-clicks">Número de clics del hijo: {{clicks}}</p>
+
+      <p data-test="parent-message">Mensaje recibido: {{parentMsg}}</p>
+
+      <button
+        type="button" class="btn btn-danger mb-3"
+        (click)="reset()">Resetear contador
+      </button>
+
+      <app-child
+        [counter]="counter"
+        [message]="childMsg"
+        (incrementEvent)="onIncrement($event)"
+        (resetEvent)="onResetClicks()">
+
+      </app-child>
+
+      <br>
+
+      <app-mediator
+        [counter]="counter"
+        [clicks]="clicks"
+        (sendToParentEvent)="onReceiveMsg($event)"
+        (sendToChildEvent)="onSendMsgToChild($event)">
+
+      </app-mediator>
+
+    </div>
+  </div>
+</div>
+
+
