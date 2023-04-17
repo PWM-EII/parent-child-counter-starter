@@ -25,8 +25,6 @@
       <br>
 
       <app-mediator
-        [counter]="counter"
-        [clicks]="clicks"
         (sendToParentEvent)="onReceiveMsg($event)"
         (sendToChildEvent)="onSendMsgToChild($event)">
 

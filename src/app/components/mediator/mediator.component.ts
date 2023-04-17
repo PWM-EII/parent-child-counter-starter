@@ -7,11 +7,6 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 })
 export class MediatorComponent {
 
-  @Input()
-  counter: number = 0;
-  @Input()
-  clicks: number = 0;
-
   @Output()
   sendToParentEvent = new EventEmitter<string>();
   @Output()
